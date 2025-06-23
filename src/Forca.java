@@ -1,25 +1,37 @@
-import java.util.ArrayList;
+import java.util.Set;
+import java.util.HashSet;
 
 public class Forca {
     private String palavra;
     private String dica;
     private int erros;
     private final int maxErros = 6;
-    private ArrayList<Character> letrasTentadas;
+    private Set<Character> letrasTentadas;
 
-    public Forca(String palavra, String dica, int erros, ArrayList<Character> letrasTentadas) {
-        this.palavra = palavra;
-        this.dica = dica;
-        this.erros = erros;
-        this.letrasTentadas = letrasTentadas;
+    public Forca(String palavra, String dica) {
+        if (palavra == null || palavra.trim().isEmpty()) {
+            throw new IllegalArgumentException("Palavra não pode ser nula ou vazia.");
+        }
+        if (dica == null || dica.trim().isEmpty()) {
+            throw new IllegalArgumentException("Dica não pode ser nula ou vazia.");
+        }
+
+        this.palavra = palavra.trim().toUpperCase();
+        this.dica = dica.trim();
+        this.erros = 0;
+        this.letrasTentadas = new HashSet<>();
     }
 
     public String getPalavra() {
+
         return palavra;
     }
 
     public void setPalavra(String palavra) {
-        this.palavra = palavra;
+        if (palavra == null || palavra.trim().isEmpty()) {
+            throw new IllegalArgumentException("Palavra não pode ser nula ou vazia.");
+        }
+        this.palavra = palavra.trim().toUpperCase();
     }
 
     public String getDica() {
@@ -27,27 +39,22 @@ public class Forca {
     }
 
     public void setDica(String dica) {
-        this.dica = dica;
+        if (dica == null || dica.trim().isEmpty()) {
+            throw new IllegalArgumentException("Dica não pode ser nula ou vazia.");
+        }
+        this.dica = dica.trim();
     }
 
     public int getErros() {
         return erros;
     }
 
-    public void setErros(int erros) {
-        this.erros = erros;
-    }
-
     public int getMaxErros() {
         return maxErros;
     }
 
-    public ArrayList<Character> getLetrasTentadas() {
+    public Set<Character> getLetrasTentadas() {
         return letrasTentadas;
-    }
-
-    public void setLetrasTentadas(ArrayList<Character> letrasTentadas) {
-        this.letrasTentadas = letrasTentadas;
     }
 
 }
