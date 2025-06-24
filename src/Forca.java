@@ -78,4 +78,18 @@ public class Forca {
         }
     }
 
+    public String mostrarPalavraParcial() {
+        StringBuilder resultado = new StringBuilder();
+        for (int i = 0; i < palavra.length(); i++) {
+            char letra = palavra.charAt(i);
+            if (letrasTentadas.contains(letra)) {
+                resultado.append(letra + " ");
+            } else {
+                resultado.append("_ ");
+            }
+        }
+        return resultado.toString().trim();
+
+    }
+
 }
