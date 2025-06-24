@@ -57,4 +57,25 @@ public class Forca {
         return letrasTentadas;
     }
 
+    public boolean letraJaTentada(char letra) {
+        char letraConvertida = Character.toUpperCase(letra);
+        return letrasTentadas.contains(letraConvertida);
+    }
+
+    public boolean jogar(char letra) {
+        char letraConvertida = Character.toUpperCase(letra);
+        if (letraJaTentada(letraConvertida)) {
+            return false;
+        }
+
+        letrasTentadas.add(letraConvertida);
+
+        if (palavra.contains(Character.toString(letraConvertida))) {
+            return true;
+        } else {
+            erros++;
+            return false;
+        }
+    }
+
 }
