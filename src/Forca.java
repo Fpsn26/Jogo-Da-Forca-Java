@@ -5,7 +5,7 @@ public class Forca {
     private String palavra;
     private String dica;
     private int erros;
-    private final int maxErros = 6;
+    private static final int maxErros = 6;
     private Set<Character> letrasTentadas;
 
     public Forca(String palavra, String dica) {
@@ -23,7 +23,6 @@ public class Forca {
     }
 
     public String getPalavra() {
-
         return palavra;
     }
 
@@ -90,6 +89,32 @@ public class Forca {
         }
         return resultado.toString().trim();
 
+    }
+
+    public boolean isFimDeJogo() {
+        if (erros == maxErros || venceu()) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    public boolean venceu() {
+        for (int i = 0; i < palavra.length(); i++) {
+            char letra = palavra.charAt(i);
+            if (!letrasTentadas.contains(letra)) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    public String mostrarResultadoFinal() {
+        if (venceu()) {
+            return "Você venceu";
+        } else {
+            return "Você perdeu";
+        }
     }
 
 }
