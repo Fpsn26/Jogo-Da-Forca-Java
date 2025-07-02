@@ -11,6 +11,12 @@ Thumbs.db
 # Ignorar arquivos temporários do VS Code
 .vscode/
 
+.idea
+
+Jogo-Da-Forca-Java.iml
+
+out/
+
 # Ignorar arquivos de backup/swap
 *.log
 *.tmp
