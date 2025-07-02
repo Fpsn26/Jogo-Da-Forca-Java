@@ -17,6 +17,10 @@ public class Main {
             char letra = scan.next().charAt(0);
             forc.jogar(letra);
             System.out.println("Letras já tentadas: " + forc.getLetrasTentadas());
+            System.out.println("Erros: " + forc.getErros());
+            if(forc.isFimDeJogo()){
+                System.out.println(forc.mostrarResultadoFinal());
+            }
         }
 
         scan.close();
