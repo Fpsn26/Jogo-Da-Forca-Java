@@ -111,9 +111,9 @@ public class Forca {
 
     public String mostrarResultadoFinal() {
         if (venceu()) {
-            return "Você venceu";
+            return "Parabéns você venceu!";
         } else {
-            return "Você perdeu";
+            return "Você perdeu!";
         }
     }
 
