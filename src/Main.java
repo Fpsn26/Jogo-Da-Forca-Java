@@ -15,6 +15,9 @@ public class Main {
             System.out.println("Dica: " + dica);
             System.out.println("Digite uma letra: ");
             char letra = scan.next().charAt(0);
+            if(forc.letraJaTentada(letra)){
+                System.out.println("Letra ja tentada!");
+            }
             forc.jogar(letra);
             System.out.println("Letras já tentadas: " + forc.getLetrasTentadas());
             System.out.println("Erros: " + forc.getErros());
