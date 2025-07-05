@@ -12,7 +12,7 @@ public class Main {
 
         while (!forc.isFimDeJogo()){
             System.out.println(forc.mostrarPalavraParcial());
-            System.out.println("Dica: " + dica);
+            System.out.println("Dica: " + forc.getDica());
             System.out.println("Digite uma letra: ");
             char letra = scan.next().charAt(0);
             if(forc.letraJaTentada(letra)){
@@ -20,9 +20,10 @@ public class Main {
             }
             forc.jogar(letra);
             System.out.println("Letras já tentadas: " + forc.getLetrasTentadas());
-            System.out.println("Erros: " + forc.getErros());
+            System.out.println("Erros: " + forc.getErros() +"/" + forc.getMaxErros());
             if(forc.isFimDeJogo()){
                 System.out.println(forc.mostrarResultadoFinal());
+                System.out.println("A palavra é: " + forc.getPalavra());
             }
         }
 

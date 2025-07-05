@@ -26,22 +26,8 @@ public class Forca {
         return palavra;
     }
 
-    public void setPalavra(String palavra) {
-        if (palavra == null || palavra.trim().isEmpty()) {
-            throw new IllegalArgumentException("Palavra não pode ser nula ou vazia.");
-        }
-        this.palavra = palavra.trim().toUpperCase();
-    }
-
     public String getDica() {
         return dica;
-    }
-
-    public void setDica(String dica) {
-        if (dica == null || dica.trim().isEmpty()) {
-            throw new IllegalArgumentException("Dica não pode ser nula ou vazia.");
-        }
-        this.dica = dica.trim();
     }
 
     public int getErros() {
