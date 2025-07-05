@@ -1,35 +1,31 @@
+
 # 🎯 Jogo da Forca em Java (Terminal)
 
-Um jogo **clássico da forca**, totalmente implementado em **Java** para ser executado no **terminal**.  
-O projeto foi criado para praticar:
+Um jogo **clássico da forca**, totalmente implementado em **Java** para execução no **terminal**.  
+Ideal para praticar:
 
-- Lógica de programação  
-- Estruturas de dados  
-- Manipulação de strings  
-- Modularização em Java  
+- Lógica de programação
+- Estruturas de dados
+- Manipulação de strings
+- Modularização e orientação a objetos em Java
 
-Ele oferece uma experiência completa, com sorteio de palavras, dicas, limite de tentativas e feedback claro para o usuário.
-
----
-
-## 📌 Funcionalidades Principais
-
-- **Banco de Palavras Interno** – conjunto pré‑definido de palavras e dicas.  
-- **Sorteio Aleatório** – cada partida seleciona uma palavra aleatoriamente.  
-- **Interface de Terminal** – interação simples e intuitiva via console.  
-- **Controle de Tentativas** – limite de **6 erros** para adivinhar a palavra.  
-- **Feedback Visual** – exibe:
-
-  - Palavra com lacunas (`_ _ _ _`)  
-  - Letras já tentadas  
-  - Contagem de erros  
-
-- **Validação de Entradas** – impede repetição de letras já usadas.  
-- **Mensagens de Status** – informa acertos, erros, vitória ou derrota.
+O jogo realiza sorteio de palavras, fornece dicas, gerencia tentativas e oferece feedback visual completo ao usuário.
 
 ---
 
-## 🖼️ Demonstração de Uso
+## 📌 Funcionalidades
+
+- ✅ **Banco de Palavras Interno** com dicas temáticas
+- ✅ **Sorteio Aleatório** a cada nova partida
+- ✅ **Interface de Terminal** limpa e intuitiva
+- ✅ **Controle de Tentativas** com limite de 6 erros
+- ✅ **Exibição Visual** de progresso e letras tentadas
+- ✅ **Validação de Entrada** e prevenção de letras repetidas
+- ✅ **Mensagens Dinâmicas** de vitória, derrota e acertos
+
+---
+
+## 🖼️ Demonstração
 
 ```text
 *********************************
@@ -55,15 +51,6 @@ Digite uma letra: E
 
 Letra incorreta!
 
-Dica: Linguagem de programacao
-Palavra: _ A _ A
-Erros: 1/6
-Letras tentadas: [A, E]
-
-Digite uma letra: J
-
-Boa! Letra correta.
-
 ...
 
 Parabéns! Você venceu!
@@ -74,62 +61,58 @@ A palavra era: JAVA
 
 ## ⚙️ Estrutura do Projeto
 
-| Arquivo / Pasta    | Responsabilidade                                                                 |
-|--------------------|----------------------------------------------------------------------------------|
-| `Main.java`        | **Classe principal** que inicia e controla o fluxo do jogo. **(TODO: implementar)** |
-| `Forca.java`       | Modela o estado do jogo (palavra secreta, dica, erros, letras tentadas).         |
-| `BancoPalavras.java` | Armazena e fornece aleatoriamente as palavras e suas dicas.                    |
-
-> **Observação:** todas as classes ficam no mesmo diretório raiz para simplificar a compilação via terminal.
+| Arquivo / Classe       | Responsabilidade                                                                 |
+|------------------------|----------------------------------------------------------------------------------|
+| `Main.java`            | Inicia o jogo e gerencia o fluxo principal da aplicação.                        |
+| `Forca.java`           | Controla a lógica do jogo: acertos, erros, letras tentadas, vitória/derrota.   |
+| `BancoPalavras.java`   | Contém as palavras e dicas. Sorteia uma nova palavra para cada partida.         |
 
 ---
 
-## 🛠️ Como Executar o Projeto
+## 🛠️ Como Executar
 
-> É um projeto 100 % Java puro – **sem dependências externas**.
+> Projeto 100 % Java puro – **sem dependências externas**
 
-### Pré‑requisitos
+### ⚙️ Requisitos
 
-- **JDK 8** ou superior instalado (garanta que `java` e `javac` estejam no `PATH`).
+- **JDK 8+** instalado
+- `javac` e `java` configurados no `PATH`
 
-### 1. Compilação
+### ▶️ Passos
 
-Abra o terminal na pasta raiz do projeto e execute:
-
-```bash
-javac *.java
-```
-
-### 2. Execução
-
-Após compilar, inicie o jogo com:
+1. Abra o terminal na raiz do projeto
+2. Compile os arquivos:
 
 ```bash
-java Main
+javac src/*.java
 ```
 
-> ⚠️ A lógica da classe **`Main.java`** ainda precisa ser implementada conforme descrito neste README.
+3. Execute o jogo:
+
+```bash
+java -cp src Main
+```
 
 ---
 
 ## 📋 Banco de Palavras
 
-O jogo possui um banco interno com **20 palavras** sobre programação e tecnologia. Exemplos:
+O jogo possui um banco com termos comuns em **programação e tecnologia**. Exemplos:
 
 | Palavra           | Dica                                |
 |-------------------|-------------------------------------|
 | `JAVA`            | Linguagem de programacao            |
-| `COMPUTADOR`      | Maquina de processamento            |
 | `ENCAPSULAMENTO`  | Principio da POO                    |
+| `COMPUTADOR`      | Maquina de processamento            |
 | `ALGORITMO`       | Sequencia de passos logicos         |
 | `HARDWARE`        | Parte fisica do computador          |
-| `POLIMORFISMO`    | Objeto que assume varias formas     |
 | `HERANCA`         | Reuso de codigo em POO              |
+| `POLIMORFISMO`    | Objeto que assume varias formas     |
 
 ---
 
 ## 📜 Licença
 
-Este projeto está licenciado sob a **MIT License** – consulte [`LICENSE.md`](LICENSE.md) para detalhes.
+Este projeto está sob a **Licença MIT** – consulte [`LICENSE.md`](LICENSE.md) para mais detalhes.
 
 &copy; 2025 Felipe Sanches
