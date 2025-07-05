@@ -34,25 +34,26 @@ _ _ _ _
 Dica: Linguagem de programacao
 Digite uma letra: A
 Letras já tentadas: [A]
-Erros: 0
+Erros: 0/6
 
 _ A _ A
 Dica: Linguagem de programacao
 Digite uma letra: E
 Letra ja tentada!
 Letras já tentadas: [A, E]
-Erros: 1
+Erros: 1/6
 
 _ A _ A
 Dica: Linguagem de programacao
 Digite uma letra: J
 Letras já tentadas: [A, E, J]
-Erros: 1
+Erros: 1/6
 
 J A _ A
 ...
 
 Parabéns você venceu!
+A palavra é: JAVA
 
 ```
 
