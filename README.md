@@ -28,33 +28,32 @@ O jogo realiza sorteio de palavras, fornece dicas, gerencia tentativas e oferece
 ## 🖼️ Demonstração
 
 ```text
-*********************************
-*       JOGO DA FORCA           *
-*********************************
+===Bem vindo ao Jogo Da Forca===
+_ _ _ _
 
 Dica: Linguagem de programacao
-Palavra: _ _ _ _
-
-Erros: 0/6
-Letras tentadas: []
-
 Digite uma letra: A
+Letras já tentadas: [A]
+Erros: 0
 
-Boa! Letra correta.
-
+_ A _ A
 Dica: Linguagem de programacao
-Palavra: _ A _ A
-Erros: 0/6
-Letras tentadas: [A]
-
 Digite uma letra: E
+Letra ja tentada!
+Letras já tentadas: [A, E]
+Erros: 1
 
-Letra incorreta!
+_ A _ A
+Dica: Linguagem de programacao
+Digite uma letra: J
+Letras já tentadas: [A, E, J]
+Erros: 1
 
+J A _ A
 ...
 
-Parabéns! Você venceu!
-A palavra era: JAVA
+Parabéns você venceu!
+
 ```
 
 ---
@@ -116,3 +115,4 @@ O jogo possui um banco com termos comuns em **programação e tecnologia**. Exem
 Este projeto está sob a **Licença MIT** – consulte [`LICENSE.md`](LICENSE.md) para mais detalhes.
 
 &copy; 2025 Felipe Sanches
+    
